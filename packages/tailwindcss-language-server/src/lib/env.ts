@@ -11,6 +11,7 @@ function isBuiltin(id: string) {
   // Node 16.17+, v18.6.0+, >= v20
   // VSCode >= 1.78
   if ('isBuiltin' in Module) {
+    // @ts-ignore
     return Module.isBuiltin(id)
   }
 
