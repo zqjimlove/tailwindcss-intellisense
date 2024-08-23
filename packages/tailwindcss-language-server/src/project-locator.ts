@@ -16,6 +16,7 @@ import { extractSourceDirectives, resolveCssImports } from './css'
 import { normalizeDriveLetter, normalizePath, pathToFileURL } from './utils'
 import postcss from 'postcss'
 import * as oxide from './oxide'
+import { getPostcssParser } from './util/getPostcssParser'
 import { analyzeStylesheet, TailwindStylesheet } from './version-guesser'
 
 export interface ProjectConfig {
@@ -705,6 +706,7 @@ class FileEntry {
     try {
       let result = await resolveCssImports({ resolver, loose: true }).process(this.content, {
         from: this.path,
+        parser: getPostcssParser(this.path),
       })
       let deps = result.messages.filter((msg) => msg.type === 'dependency')
 
@@ -742,6 +744,7 @@ class FileEntry {
       // rule exporter instead for now.
       await postcss([extractSourceDirectives(this.sources)]).process(this.content, {
         from: this.realpath,
+		parser: getPostcssParser(this.realpath),
       })
     } catch (err) {
       //

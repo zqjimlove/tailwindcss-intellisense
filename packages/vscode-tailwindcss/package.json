@@ -1,8 +1,8 @@
 {
-  "name": "vscode-tailwindcss",
+  "name": "vscode-tailwindcss-plus",
   "version": "0.14.8",
-  "displayName": "Tailwind CSS IntelliSense",
-  "description": "Intelligent Tailwind CSS tooling for VS Code",
+  "displayName": "Tailwind CSS IntelliSense Plus",
+  "description": "Intelligent Tailwind CSS tooling for VS Code - Support scss/sass/less",
   "author": "Brad Cornes <hello@bradley.dev>",
   "license": "MIT",
   "homepage": "https://github.com/tailwindlabs/tailwindcss-intellisense",
