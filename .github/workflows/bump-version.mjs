@@ -11,7 +11,7 @@ const __dirname = fileURLToPath(new URL('.', import.meta.url))
 // Querying the marketplace API directly is not supported or recommended
 let result = spawnSync(
   path.resolve(__dirname, '../../packages/vscode-tailwindcss/node_modules/.bin/vsce'),
-  ['show', 'zqjimlove.vscode-tailwindcss', '--json'],
+  ['show', 'TailwindCSSIntelliSenseplus.vscode-tailwindcss-plus', '--json'],
   { encoding: 'utf8' },
 )
 
