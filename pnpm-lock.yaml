@@ -31,6 +31,16 @@ importers:
         version: 7.7.1
 
   packages/tailwindcss-language-server:
+    dependencies:
+      postcss-less:
+        specifier: ^6.0.0
+        version: 6.0.0(postcss@8.4.31)
+      postcss-sass:
+        specifier: ^0.5.0
+        version: 0.5.0
+      postcss-scss:
+        specifier: ^4.0.9
+        version: 4.0.9(postcss@8.4.31)
     devDependencies:
       '@parcel/watcher':
         specifier: 2.0.3
@@ -1555,6 +1565,11 @@ packages:
   globrex@0.1.2:
     resolution: {integrity: sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==}
 
+  gonzales-pe@4.3.0:
+    resolution: {integrity: sha512-otgSPpUmdWJ43VXyiNgEYE4luzHCL2pz4wQ0OnDluC6Eg4Ko3Vexy/SrSynglw/eR+OhkzmqFCZa/OFa/RgAOQ==}
+    engines: {node: '>=0.6.0'}
+    hasBin: true
+
   gopd@1.0.1:
     resolution: {integrity: sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==}
 
@@ -2153,6 +2168,12 @@ packages:
     peerDependencies:
       postcss: ^8.4.21
 
+  postcss-less@6.0.0:
+    resolution: {integrity: sha512-FPX16mQLyEjLzEuuJtxA8X3ejDLNGGEG503d2YGZR5Ask1SpDN8KmZUMpzCvyalWRywAn1n1VOA5dcqfCLo5rg==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      postcss: ^8.3.5
+
   postcss-load-config@3.0.1:
     resolution: {integrity: sha512-/pDHe30UYZUD11IeG8GWx9lNtu1ToyTsZHnyy45B4Mrwr/Kb6NgYl7k753+05CJNKnjbwh4975amoPJ+TEjHNQ==}
     engines: {node: '>= 10'}
@@ -2174,6 +2195,16 @@ packages:
     engines: {node: '>=12.0'}
     peerDependencies:
       postcss: ^8.2.14
+
+  postcss-sass@0.5.0:
+    resolution: {integrity: sha512-qtu8awh1NMF3o9j/x9j3EZnd+BlF66X6NZYl12BdKoG2Z4hmydOt/dZj2Nq+g0kfk2pQy3jeYFBmvG9DBwynGQ==}
+    engines: {node: ^10 || ^12 || >=14}
+
+  postcss-scss@4.0.9:
+    resolution: {integrity: sha512-AjKOeiwAitL/MXxQW2DliT28EKukvvbEWx3LBmJIRN8KfBGZbRTxNYW0kSqi1COiTZ57nZ9NW06S6ux//N1c9A==}
+    engines: {node: '>=12.0'}
+    peerDependencies:
+      postcss: ^8.4.29
 
   postcss-selector-parser@6.0.10:
     resolution: {integrity: sha512-IQ7TZdoaqbT+LCpShg46jnZVlhWD2w6iQYAcYXfHARZ7X1t/UGhhceQDs5X0cGqKvYlHNOuv7Oa1xmb0oQuA3w==}
@@ -3888,6 +3919,10 @@ snapshots:
 
   globrex@0.1.2: {}
 
+  gonzales-pe@4.3.0:
+    dependencies:
+      minimist: 1.2.8
+
   gopd@1.0.1:
     dependencies:
       get-intrinsic: 1.2.4
@@ -4432,6 +4467,10 @@ snapshots:
       camelcase-css: 2.0.1
       postcss: 8.5.1
 
+  postcss-less@6.0.0(postcss@8.4.31):
+    dependencies:
+      postcss: 8.4.31
+
   postcss-load-config@3.0.1:
     dependencies:
       cosmiconfig: 7.1.0
@@ -4448,6 +4487,15 @@ snapshots:
     dependencies:
       postcss: 8.5.1
       postcss-selector-parser: 6.1.2
+
+  postcss-sass@0.5.0:
+    dependencies:
+      gonzales-pe: 4.3.0
+      postcss: 8.4.31
+
+  postcss-scss@4.0.9(postcss@8.4.31):
+    dependencies:
+      postcss: 8.4.31
 
   postcss-selector-parser@6.0.10:
     dependencies:

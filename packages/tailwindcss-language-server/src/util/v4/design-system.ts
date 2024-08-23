@@ -10,9 +10,6 @@ import { pathToFileURL } from '../../utils'
 import type { Jiti } from 'jiti/lib/types'
 import { assets } from './assets'
 import { plugins } from './plugins'
-import { resolveCssFrom, resolveCssImports } from '../../css'
-import { resolveFrom } from '../resolveFrom'
-import { pathToFileURL } from 'tailwindcss-language-server/src/utils'
 import { getPostcssParser } from '../getPostcssParser'
 
 const HAS_V4_IMPORT = /@import\s*(?:'tailwindcss'|"tailwindcss")/

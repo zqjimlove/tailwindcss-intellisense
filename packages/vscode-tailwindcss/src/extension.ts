@@ -41,7 +41,7 @@ import * as servers from './servers/index'
 const colorNames = Object.keys(namedColors)
 
 const CLIENT_ID = 'tailwindcss-intellisense'
-const CLIENT_NAME = 'Tailwind CSS IntelliSense'
+const CLIENT_NAME = 'Tailwind PostCSS IntelliSense Plus'
 
 let currentClient: Promise<LanguageClient> | null = null
 

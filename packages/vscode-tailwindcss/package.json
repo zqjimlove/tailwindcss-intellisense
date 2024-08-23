@@ -1,7 +1,7 @@
 {
   "name": "vscode-tailwindcss-plus",
   "version": "0.14.8",
-  "displayName": "Tailwind CSS IntelliSense Plus",
+  "displayName": "Tailwind PostCSS IntelliSense Plus",
   "description": "Intelligent Tailwind CSS tooling for VS Code - Support scss/sass/less",
   "author": "Brad Cornes <hello@bradley.dev>",
   "license": "MIT",
@@ -14,7 +14,7 @@
     "type": "git",
     "url": "https://github.com/tailwindlabs/tailwindcss-intellisense.git"
   },
-  "publisher": "zqjimlove",
+  "publisher": "TailwindCSSIntelliSenseplus",
   "keywords": [
     "tailwind",
     "tailwindcss",
@@ -143,7 +143,7 @@
       }
     ],
     "configuration": {
-      "title": "Tailwind CSS IntelliSense",
+      "title": "Tailwind PostCSS IntelliSense Plus",
       "properties": {
         "tailwindCSS.emmetCompletions": {
           "type": "boolean",
