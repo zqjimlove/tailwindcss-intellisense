@@ -6,6 +6,7 @@ import * as path from 'node:path'
 import { resolveCssFrom, resolveCssImports } from '../../css'
 import { resolveFrom } from '../resolveFrom'
 import { pathToFileURL } from 'tailwindcss-language-server/src/utils'
+import { getPostcssParser } from '../getPostcssParser'
 
 const HAS_V4_IMPORT = /@import\s*(?:'tailwindcss'|"tailwindcss")/
 const HAS_V4_THEME = /@theme\s*\{/
@@ -89,7 +90,10 @@ export async function loadDesignSystem(
 
   // Step 2: Use postcss to resolve `@import` rules in the CSS file
   if (!supportsImports) {
-    let resolved = await resolveCssImports().process(css, { from: filepath })
+    let resolved = await resolveCssImports().process(css, {
+      from: filepath,
+      parser: getPostcssParser(filepath),
+    })
     css = resolved.css
   }
 

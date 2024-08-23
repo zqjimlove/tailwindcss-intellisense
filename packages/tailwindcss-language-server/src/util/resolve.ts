@@ -8,6 +8,7 @@ import {
 
 export function createResolver(options: Partial<ResolveOptions> = {}): Resolver {
   return ResolverFactory.createResolver({
+    // @ts-ignore
     fileSystem: new CachedInputFileSystem(fs, 4000),
     useSyncFileSystemCalls: true,
     conditionNames: ['node', 'require'],
